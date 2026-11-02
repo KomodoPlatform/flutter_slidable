@@ -1,8 +1,17 @@
 library flutter_slidable;
 
-export 'package:flutter_slidable/src/widgets/slidable.dart';
-export 'package:flutter_slidable/src/widgets/slide_action.dart';
-export 'package:flutter_slidable/src/widgets/slidable_action_pane.dart';
-export 'package:flutter_slidable/src/widgets/slidable_dismissal.dart';
-
-export 'package:flutter_slidable/src/widgets/fractionnally_aligned_sized_box.dart';
+export 'src/action_pane_motions.dart';
+export 'src/actions.dart';
+export 'src/auto_close_behavior.dart'
+    show SlidableAutoCloseBehavior, SlidableAutoCloseNotification;
+export 'src/controller.dart'
+    show ResizeRequest, SlidableController, ActionPaneType;
+export 'src/dismissible_pane.dart';
+export 'src/dismissible_pane_motions.dart';
+export 'src/notifications.dart';
+export 'src/notifications_old.dart'
+    show
+        SlidableNotification,
+        SlidableRatioNotification,
+        SlidableNotificationListener;
+export 'src/slidable.dart';

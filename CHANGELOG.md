@@ -1,3 +1,167 @@
+## 5.2.0
+
+### Added
+* `onActionPaneChanged` callback on `Slidable`, called once the `Slidable` comes to rest with a different action pane shown (`start`, `end`, or `none` when closed) [#273](https://github.com/letsar/flutter_slidable/issues/273)
+* `dismissing` getter on `SlidableController`.
+
+## 5.1.0
+
+### Added
+* `labelStyle` and `iconSize` parameters to `SlidableAction`.
+
+### Fixed
+* Calling `dismiss` from an action with `autoClose` set to `true` no longer cancels the dismissal [#391](https://github.com/letsar/flutter_slidable/issues/391) [#326](https://github.com/letsar/flutter_slidable/issues/326)
+* `dismiss` now uses its `duration` parameter. Thanks to @PurpleSwords.
+
+## 5.0.0
+
+### Breaking
+* Migrates to the decoupled `material_ui` package [#548](https://github.com/letsar/flutter_slidable/issues/548). The built-in actions now read their theme from `material_ui`, so your app must be migrated to `material_ui` as well. See the [migration guide](https://github.com/letsar/flutter_slidable/blob/master/MIGRATION.md).
+* Minimum version of Flutter (3.47.0 now) and Dart (3.13.0 now).
+
+### Fixed
+* Diagonal scrolls triggering the slidable instead of the enclosing scrollable [#550](https://github.com/letsar/flutter_slidable/issues/550)
+* Exception when replacing the `controller` of a `Slidable` [#523](https://github.com/letsar/flutter_slidable/issues/523)
+* Jerky closing animation when only one action pane is set [#538](https://github.com/letsar/flutter_slidable/issues/538)
+
+## 4.0.3
+
+### Fixed
+* Fixes issue with dismissal [#537](https://github.com/letsar/flutter_slidable/issues/537)
+
+## 4.0.2
+
+### Fixed
+* Issue when actionPaneConfigurator is null when calling openCurrentActionPane. Thanks to @EM-Sabeel.
+
+## 4.0.1
+
+### Fixed
+* Issue in auto_close_behavior where removeStatusListener was not called.
+
+## 4.0.0
+
+### Changed
+* Minimum version of Flutter (3.27.0 now)
+
+### Fixed
+* Icon color in actions [#512](https://github.com/letsar/flutter_slidable/issues/512)
+* Use withValues instead of withOpacity
+
+## 3.1.2
+
+### Fixed
+* Use Object.hash instead of hashValues.
+
+## 3.1.1
+
+### Fixed
+* An issue when having only one action pane set [#311](https://github.com/letsar/flutter_slidable/issues/311)
+* An issue with delete threshold [#230](https://github.com/letsar/flutter_slidable/issues/230) 
+
+## 3.1.0
+
+### Added
+* A way to provide a controller to the Slidable.
+  
+## 3.0.1
+
+### Changed
+* Remove deprecation use of `primary` and `surface` parameters from OutlinedButton.styleFrom method. (See https://github.com/letsar/flutter_slidable/pull/443)
+
+## 3.0.0
+
+### Changed
+* Minimum version of Flutter (3.7.0 now)
+
+## 2.0.0
+### Changed
+* Minimum version of Flutter (3.0.0 now) and Dart (2.17.0 now).
+
+## 1.3.2
+### Fixed
+* ClipBehavior.none issue (https://github.com/letsar/flutter_slidable/issues/361).
+
+## 1.3.1
+### Fixed
+* Rare LateInitializationError with DrawerMotion (https://github.com/letsar/flutter_slidable/issues/289).
+* Issue with shadow content (https://github.com/letsar/flutter_slidable/issues/279).
+
+## 1.3.0
+### Added
+* Padding and BorderRadius to SlidableAction.
+
+## 1.2.1
+### Fixed
+* Build warning
+
+## 1.2.0
+### Added
+* A way to automatically close other Slidables within the same group by tapping on them.
+* Add a dragDismissible parameter on ActionPane.
+### Fixed
+* The RTL issue (#244).
+
+## 1.1.0
+### Changed
+* Created a totally different notification system in order to be more flexible.
+* Deprecated SlidableNotificationListener in favor of SlidableAutoCloseBehavior.
+
+## 1.0.0
+Same as 1.0.0-dev.9. This is just for making it clear that it's now stable.
+
+## 1.0.0-dev.9
+### Fixed
+* Fixes an issue where we click on the Slidable instead of dragging it (https://github.com/letsar/flutter_slidable/pull/235).
+
+## 1.0.0-dev.8
+### Fixed
+* Fixes an issue where the Dismissible animation stopped in middle when the gesture was too fast.
+
+## 1.0.0-dev.7
+### Fixed
+* Fixes an issue where the Slidable animation stopped in middle when the gesture was too fast.
+
+## 1.0.0-dev.6
+### Fixed
+* Fixes an issue preventing the actionPaneType to be updated when it animates (https://github.com/letsar/flutter_slidable/issues/226).
+
+## 1.0.0-dev.5
+### Fixed
+* Fixes an issue preventing the Slidable to reach the extentRatio manually (https://github.com/letsar/flutter_slidable/issues/225).
+
+## 1.0.0-dev.4
+### Added
+* ResizeRequest is now available, and the SlidableController.dismiss method can be used from outside.
+
+## 1.0.0-dev.3
+### Fixed
+* Fixes Dismissal issue with endActionPane (https://github.com/letsar/flutter_slidable/issues/216).
+
+## 1.0.0-dev.2
+### Changed
+* Flutter Favorite package logo
+
+## 1.0.0-dev.1
+### Changed
+* Complete package rewriting in order to be more flexible and simple to use.
+
+## 0.6.0
+### Added
+* Null Safety Support
+
+## 0.5.7
+### Fixed
+* Formatting issues
+
+## 0.5.6
+### Fixed
+* Color issue in SlideAction
+
+## 0.5.5
+### Fixed
+* Static Analysis issues
+
 ## 0.5.4
 ### Added
 * Ripple effect when tapping on the IconSlideAction (https://github.com/letsar/flutter_slidable/pull/89)
